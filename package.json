@@ -4,6 +4,8 @@
   "description": "A language that compiles to Stack VM",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p .",
+    "lint": "xo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/thomas-crane/slang#readme",
   "devDependencies": {
     "@types/node": "^17.0.5",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "xo": "^0.47.0"
   }
 }
