@@ -22,7 +22,10 @@ export type TokenKind =
   | NodeKind.LeftAngleEqualsToken
   | NodeKind.RightAngleEqualsToken
   | NodeKind.BangToken
-  | NodeKind.EqualsToken;
+  | NodeKind.EqualsToken
+  | NodeKind.IfToken
+  | NodeKind.ElseToken
+  | NodeKind.UnknownToken;
 
 export type OperatorToken =
   | Token<NodeKind.PlusToken>
@@ -38,7 +41,7 @@ export type OperatorToken =
 
 export type UnaryOperatorToken = Token<NodeKind.BangToken> | Token<NodeKind.PlusToken> | Token<NodeKind.MinusToken>;
 
-export class Token<T extends TokenKind> implements NodeBase {
+export class Token<T extends TokenKind = TokenKind> implements NodeBase {
   constructor(
     readonly kind: T,
     readonly value: string,
