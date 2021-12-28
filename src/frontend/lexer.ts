@@ -1,6 +1,6 @@
-import { NodeKind } from './node-kind';
-import { Position } from './position';
-import { Token, TokenKind } from './token';
+import { NodeKind } from '../ast/node-kind';
+import { Position } from '../ast/position';
+import { Token, TokenKind } from '../ast/token';
 import { match } from './utils';
 
 const isWhitespace = match(/\s/);
